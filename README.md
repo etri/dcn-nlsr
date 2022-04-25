@@ -35,6 +35,12 @@ The key design goals of DCN-NLSR is to provide the following principles:
 - maintaining NLSR's routing architecture to inherit its advantages of midularity and extensibility.  
 
 # Build
+Execute the following commands to build PSync:  
+cd PSync  
+./waf configure  
+./waf  
+sudo ./waf install
+
 Execute the following commands to build DCN-NLSR:  
 ./waf configure  
 ./waf  
