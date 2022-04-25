@@ -1,43 +1,79 @@
 # DCN-NLSR: Named Data Link State Routing Protocol for DCN(Data Centric Networking)
 
-![Language](https://img.shields.io/badge/C%2B%2B-14-blue.svg)
-[![Build Status](https://travis-ci.org/named-data/NLSR.svg?branch=master)](https://travis-ci.org/named-data/NLSR)
-![Latest Version](https://img.shields.io/github/tag/named-data/NLSR.svg?color=darkkhaki&label=latest%20version)
+# Overview
 
-For complete documentation and more extensive information,
-please visit the [DCN-NLSR homepage](https://github.com/etri/dcn-nlsr).
+DCN-NLSR is an intra-domain routing protocol supporting multi-area for Named Data Networking(NDN).  
+DCN-NLSR based on NLSR is an application level protocol simular to many IP routing protocol,  
+but DCN-NLSR uses NDN's Interest/Data packets to dissemminate rotuing updates inside a single Area.  
+NLSR is the first intra-domin routing protocol in most NDN researches, but doesn't support multi-Area concept.  
+We extend NLSR to have Multi-Area which keeps the NLSR's design patterns.
 
-If you are new to the NDN software community, please read the
-[Contributor's Guide](https://github.com/named-data/.github/blob/master/CONTRIBUTING.md)
-to get started.
+DCN-NLSR is designed to accomplish three key tasks:
+- discover adjacent neighbors in specific area
+- disseminate and synchronize topology, name prefix in specific area
+- calculate a routing table and populate NFD's FIB in specific area
 
-## Overview
+DCN-NLSR uses the following modules to support Multi-Area
+- Hello Protocol - determines the status of neighboring routers using periodic Hello Interests and notifies
+other modules when neighbors' statuses change.
+- PartialSync - provides network-wide synchronization of DCN-NLSR LSDBs.
+- Sync Logic Hnadler - handles sync update notications from NSync by retrieving updated LSAs.
+- LSAs - represent routing information published by the router.
+- LSDB - stores the LSA information distributed by other routers in the network.
+- Routing table - calculates and maintains a list of next hops for each router in the network.
+- Name Prefix table - stores all advertised name prexes and their next hops.
+- FIB - maintains a shadow FIB which represents the intended state of NFD's FIB
+- Prefix Update Processor - listens for dynamic prex announcements to advertise or withdraw name
+prefixes.
 
-DCN-NLSR is a routing protocol in NDN that populates NDN's Routing Information Base.
-DCN-NLSR will continue to evolve alongside the Named Data Networking
-[protocol](https://named-data.net/doc/NDN-packet-spec/current/).
+Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.
+<img src="/images/ma-2.GIF" width="50%" height="%40">
 
-DCN-NLSR is an open and free software package licensed under the GPL 2.0 license and free to
-all Internet users and developers.  For more information about the licensing details and
-limitations, refer to [`COPYING.md`](COPYING.md).
+The key design goals of DCN-NLSR is to provide the following principles:  
+- internet scalibility via multi-area
+- compatibility with NFD and existing NLSR, and  
+- maintaining NLSR's routing architecture to inherit its advantages of midularity and extensibility.  
 
-DCN-NLSR is developed by the members of the [DCN team].
-For more details, please refer to [`AUTHORS.md`](AUTHORS.md).
-Bug reports and feedback are highly appreciated and can be made through our
-[Git site](https://github.com/etri/dcn-nlsr).
+# Build
+Execute the following commands to build DCN-NLSR:  
+./waf configure  
+./waf  
+sudo ./waf install  
+# Configuration
+After installing NLSR from source, you need to create a configuration file for NLSR. Please take a look at [nlsr.conf](/nlsr.conf) for a sample configuration.  
+# Sample Topology Configuration
+Please refer to [topology](/conf)
+# Running  
+Run dcn-nlsr with the follwing command:  
+nlsr  
 
-The main design goal of NLSR is to provide a routing protocol to populate NDN's RIB.
-DCN-NLSR calculates the routing table using link-state or hyperbolic routing and produces
-multiple faces for each reachable name prefix in a single authoritative domain. DCN-NLSR
-will continue to evolve over time to include neighbor discovery and to become a full
-fledged inter-domain routing protocol for DCN.
+# Version (DCN-NLSR 0.7.1)
+- Based on NLSR 0.7.1 & ndn-cxx 0.7.1
+ - Added Features :
+      * Anycast Name Prefix
+      * External NetName LSA for Static Redistribution
+      * Inter-Area Name LSA
+      * BGP Redistribution
 
-## Source releases
+ - Not Supported Yet :
+      * Stub Area
+      * Mac OS Platform
 
-The source code and source-code installation instructions are always available at
-the following links:
+# Supported platforms
+DCN-NLSRD has been tested on the following platforms:
 
-### Installation
-### Getting Started with DCN-NLSR
-### GitHub DCN-NLSR repository
+- Ubuntu 18.04 (amd64, armhf)
 
+Mac OS shall be supported in the future releases.
+
+## Credits  
+DCN-NLSR is designed and developed by:   
+
+- Sung Hyuk Byun (shbyun@etri.re.kr)
+- Jong Seok Lee (viper@etri.re.kr) 
+
+
+This work is one of research results of the project "Hyper-connected Intelligent Infrastructure Technology Development" conducted by ETRI, Korea. The  project leaders are:  
+
+- Namseok Ko (nsko@etri.re.kr)
+- Sun Me Kim (kimsunme@etri.re.kr) 
