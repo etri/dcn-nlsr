@@ -26,7 +26,7 @@ other modules when neighbors' statuses change.
 - Prefix Update Processor - listens for dynamic prex announcements to advertise or withdraw name
 prefixes.
 
-Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.
+Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.  
 <img src="/images/ma-2.GIF" width="50%" height="%40">
 
 The key design goals of DCN-NLSR is to provide the following principles:  
