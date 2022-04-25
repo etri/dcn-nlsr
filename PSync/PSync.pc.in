@@ -1,0 +1,9 @@
+prefix=@PREFIX@
+libdir=@LIBDIR@
+includedir=@INCLUDEDIR@
+
+Name: PSync
+Description: NDN PSync library
+Version: @VERSION@
+Libs: -L${libdir} -lPSync
+Cflags: -I${includedir}
