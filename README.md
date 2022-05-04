@@ -19,13 +19,12 @@ DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LS
 ## PartialSync - .
 ## Sync Logic Hnadler -.
 ## LSAs -.
-## LSDB - stores the LSA information distributed by other routers in the network.
-## Routing table - calculates and maintains a list of next hops for each router in the network.
-## Name Prefix table - stores all advertised name prexes and their next hops.
-## FIB - maintains a shadow FIB which represents the intended state of NFD's FIB
-## Prefix Update Processor - listens for dynamic prex announcements to advertise or withdraw name prefixes.  
-새로운 섹션 추가  
-새로 추가된 LSA에 대한 이름과 naming/기능설명 추가  
+## LSDB - 
+## Routing table 
+## Name Prefix table 
+## FIB 
+## Prefix Update Processor   
+  
 Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.  
 <img src="/images/ma-2.GIF" width="50%" height="%40">
 
