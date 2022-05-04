@@ -15,9 +15,9 @@ DCN-NLSR is designed to accomplish three key tasks:
 
 # MA-NLSR Architecture  
 DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)
-- Hello Protocol - 수정된 부분 설명 추가.  
-- PartialSync - .
-- Sync Logic Hnadler -.
+## Hello Protocol - 수정된 부분 설명 추가.  
+## PartialSync - .
+## Sync Logic Hnadler -.
 - LSAs -.
 - LSDB - stores the LSA information distributed by other routers in the network.
 - Routing table - calculates and maintains a list of next hops for each router in the network.
