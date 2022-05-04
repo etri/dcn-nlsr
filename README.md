@@ -13,7 +13,7 @@ DCN-NLSR is designed to accomplish three key tasks:
 - disseminate and synchronize topology, name prefix in specific area
 - calculate a routing table and populate NFD's FIB in specific area
 
-DCN-NLSR uses the following modules to support Multi-Area
+DCN-NLSR uses the following modules to support Multi-Area(LSA 비교 추가)
 - Hello Protocol - determines the status of neighboring routers using periodic Hello Interests and notifies
 other modules when neighbors' statuses change.
 - PartialSync - provides network-wide synchronization of DCN-NLSR LSDBs.
