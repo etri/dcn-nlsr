@@ -25,7 +25,8 @@ other modules when neighbors' statuses change.
 - FIB - maintains a shadow FIB which represents the intended state of NFD's FIB
 - Prefix Update Processor - listens for dynamic prex announcements to advertise or withdraw name
 prefixes.
-
+새로운 섹션 추가
+새로 추가된 LSA에 대한 이름과 naming/기능설명 추가
 Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.  
 <img src="/images/ma-2.GIF" width="50%" height="%40">
 
