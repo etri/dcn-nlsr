@@ -13,20 +13,19 @@ DCN-NLSR is designed to accomplish three key tasks:
 - disseminate and synchronize topology, name prefix in specific area
 - calculate a routing table and populate NFD's FIB in specific area
 
-DCN-NLSR uses the following modules to support Multi-Area(LSA 비교 추가)
-- Hello Protocol - determines the status of neighboring routers using periodic Hello Interests and notifies
-other modules when neighbors' statuses change.
-- PartialSync - provides network-wide synchronization of DCN-NLSR LSDBs.
-- Sync Logic Hnadler - handles sync update notications from NSync by retrieving updated LSAs.
-- LSAs - represent routing information published by the router.
+DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)
+- Hello Protocol - 수정된 부분 설명 추가.  
+- PartialSync - .
+- Sync Logic Hnadler -.
+- LSAs -.
 - LSDB - stores the LSA information distributed by other routers in the network.
 - Routing table - calculates and maintains a list of next hops for each router in the network.
 - Name Prefix table - stores all advertised name prexes and their next hops.
 - FIB - maintains a shadow FIB which represents the intended state of NFD's FIB
-- Prefix Update Processor - listens for dynamic prex announcements to advertise or withdraw name
-prefixes.
-새로운 섹션 추가
-새로 추가된 LSA에 대한 이름과 naming/기능설명 추가
+- Prefix Update Processor - listens for dynamic prex announcements to advertise or withdraw name  
+prefixes.  
+새로운 섹션 추가  
+새로 추가된 LSA에 대한 이름과 naming/기능설명 추가  
 Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.  
 <img src="/images/ma-2.GIF" width="50%" height="%40">
 
