@@ -14,7 +14,7 @@ DCN-NLSR is designed to accomplish three key tasks:
 - calculate a routing table and populate NFD's FIB in specific area
 
 # MA-NLSR Architecture  
-DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)  
+DCN-NLSR modifies the following modules to support "multiple areas" like OSPF.  
 The LSA format is show below.  
 Each LSA has the name \/\<network\>\/NLSR\/\<Area-ID\>\/LSA\/\<site\>\/\<router\>\/\<lsa-type\>\/\<version\>,  
 where \<lsa-type\> can be NAME, ADJACENCY, IA-NAME, Ext-NAME, Ext-Net-NAME.  
