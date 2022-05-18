@@ -50,7 +50,7 @@ The key design goals of MA-NLSR is to provide the following principles:
 
 # Build
 Execute the following commands to build PSync:  
-cd PSync  
+$ cd PSync  
 $ ./waf configure  
 $ ./waf  
 $ sudo ./waf install
