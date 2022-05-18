@@ -15,7 +15,10 @@ DCN-NLSR is designed to accomplish three key tasks:
 
 # MA-NLSR Architecture  
 DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)  
-|
+The LSA format is show below.  
+Each LSA has the name \/\<network\>\/NLSR\/\<Area-ID\>\/LSA\/\<site\>\/\<router\>\/\<lsa-type\>\/\<version\>, where \<lsa-type\> can be  
+NAME, ADJACENCY, IA-NAME, Ext-NAME, Ext-Net-NAME.  
+The \<Area-ID\> component identifies the Area to which the router belongs.  
 <!--
 ## Hello Protocol - 수정된 부분 설명 추가.  
 ## PartialSync - .
