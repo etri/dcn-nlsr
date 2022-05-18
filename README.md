@@ -43,7 +43,7 @@ The \<Area-ID\> component identifies the Area to which the router belongs.
 Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.  
 <img src="/images/ma-2.GIF" width="50%" height="%40">
 
-The key design goals of DCN-NLSR is to provide the following principles:  
+The key design goals of MA-NLSR is to provide the following principles:  
 - internet scalibility via multi-area
 - compatibility with NFD and existing NLSR, and  
 - maintaining NLSR's routing architecture to inherit its advantages of midularity and extensibility.  
@@ -55,7 +55,7 @@ cd PSync
 ./waf  
 sudo ./waf install
 
-Execute the following commands to build DCN-NLSR:  
+Execute the following commands to build MA-NLSR:  
 ./waf configure  
 ./waf  
 sudo ./waf install  
@@ -67,7 +67,7 @@ Please refer to [topology](/conf)
 Run dcn-nlsr with the follwing command:  
 nlsr  
 
-# Version (DCN-NLSR 0.7.1)
+# Version (MA-NLSR 0.7.1)
 - Based on NLSR 0.7.1 & ndn-cxx 0.7.1
  - Added Features :
       * Anycast Name Prefix
@@ -80,14 +80,14 @@ nlsr
       * Mac OS Platform
 
 # Supported platforms
-DCN-NLSRD has been tested on the following platforms:
+MA-NLSRD has been tested on the following platforms:
 
 - Ubuntu 18.04 (amd64, armhf)
 
 Mac OS shall be supported in the future releases.
 
 ## Credits  
-DCN-NLSR is designed and developed by:   
+MA-NLSR is designed and developed by:   
 
 - Sung Hyuk Byun (shbyun@etri.re.kr)
 - Jong Seok Lee (viper@etri.re.kr) 
