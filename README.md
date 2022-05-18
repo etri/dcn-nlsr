@@ -51,21 +51,21 @@ The key design goals of MA-NLSR is to provide the following principles:
 # Build
 Execute the following commands to build PSync:  
 cd PSync  
-./waf configure  
-./waf  
-sudo ./waf install
+$ ./waf configure  
+$ ./waf  
+$ sudo ./waf install
 
 Execute the following commands to build MA-NLSR:  
-./waf configure  
-./waf  
-sudo ./waf install  
+$ ./waf configure  
+$ ./waf  
+$ sudo ./waf install  
 # Configuration
 After installing NLSR from source, you need to create a configuration file for NLSR. Please take a look at [nlsr.conf](/nlsr.conf) for a sample configuration.  
 # Sample Topology Configuration
 Please refer to [topology](/conf)
 # Running  
 Run dcn-nlsr with the follwing command:  
-nlsr  
+$ nlsr  
 
 # Version (MA-NLSR 0.7.1)
 - Based on NLSR 0.7.1 & ndn-cxx 0.7.1
