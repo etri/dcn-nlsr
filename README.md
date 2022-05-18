@@ -60,7 +60,7 @@ $ ./waf configure
 $ ./waf  
 $ sudo ./waf install  
 # Configuration
-After installing NLSR from source, you need to create a configuration file for NLSR. Please take a look at [nlsr.conf](/nlsr.conf) for a sample configuration.  
+After installing MA-NLSR from source, you need to create a configuration file for MA-NLSR. Please take a look at [nlsr.conf](/nlsr.conf) for a sample configuration.  
 # Testing MA-NLSR
 Please refer to [Configuration](/conf)
 # Running  
