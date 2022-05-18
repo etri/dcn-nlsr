@@ -18,6 +18,8 @@ DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LS
 The LSA format is show below.  
 Each LSA has the name \/\<network\>\/NLSR\/\<Area-ID\>\/LSA\/\<site\>\/\<router\>\/\<lsa-type\>\/\<version\>, where \<lsa-type\> can be  
 NAME, ADJACENCY, IA-NAME, Ext-NAME, Ext-Net-NAME.  
+IA-NAME, Ext-NAME, Ext-Net-NAME are a newly added LSAs to support multi-area.  
+
 The \<Area-ID\> component identifies the Area to which the router belongs.    
 * NAME Lsa: to carry Name Prefixes within the area.  
 * ADJACENCY Lsa: to carry Adjacency Prefiexes within the area.  
