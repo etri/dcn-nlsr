@@ -15,6 +15,7 @@ DCN-NLSR is designed to accomplish three key tasks:
 
 # MA-NLSR Architecture  
 DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)
+\\<!--
 ## Hello Protocol - 수정된 부분 설명 추가.  
 ## PartialSync - .
 ## Sync Logic Hnadler -.
@@ -24,7 +25,8 @@ DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LS
 ## Name Prefix table 
 ## FIB 
 ## Prefix Update Processor   
-  
+-->
+
 Below figure shows the list of Tables that were modified (yellow) to support Multi-Area.  
 <img src="/images/ma-2.GIF" width="50%" height="%40">
 
