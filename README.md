@@ -61,8 +61,8 @@ $ ./waf
 $ sudo ./waf install  
 # Configuration
 After installing NLSR from source, you need to create a configuration file for NLSR. Please take a look at [nlsr.conf](/nlsr.conf) for a sample configuration.  
-# Sample Topology Configuration
-Please refer to [topology](/conf)
+# Testing MA-NLSR
+Please refer to [Configuration](/conf)
 # Running  
 Run dcn-nlsr with the follwing command:  
 $ nlsr  
