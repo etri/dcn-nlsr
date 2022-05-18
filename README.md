@@ -14,7 +14,7 @@ DCN-NLSR is designed to accomplish three key tasks:
 - calculate a routing table and populate NFD's FIB in specific area
 
 # MA-NLSR Architecture  
-DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)
+DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)  
 \\<!--
 ## Hello Protocol - 수정된 부분 설명 추가.  
 ## PartialSync - .
