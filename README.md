@@ -15,7 +15,7 @@ DCN-NLSR is designed to accomplish three key tasks:
 
 # MA-NLSR Architecture  
 DCN-NLSR modifies the following modules to support "multiple areas" like OSPF(LSA 비교 추가)  
-\\<!--
+<!--
 ## Hello Protocol - 수정된 부분 설명 추가.  
 ## PartialSync - .
 ## Sync Logic Hnadler -.
