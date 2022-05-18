@@ -1,20 +1,20 @@
-# DCN-NLSR: Named Data Link State Routing Protocol for DCN(Data Centric Networking)
+# MA-NLSR: Named Data Link State Routing Protocol for DCN(Data Centric Networking)
 
 # Overview
 
-DCN-NLSR is an intra-domain routing protocol supporting multi-area for Named Data Networking(NDN).  
-DCN-NLSR based on NLSR is an application level protocol simular to many IP routing protocol,  
-but DCN-NLSR uses NDN's Interest/Data packets to dissemminate rotuing updates inside a single Area.  
+MA-NLSR is an intra-domain routing protocol supporting multi-area for Named Data Networking(NDN).  
+MA-NLSR based on NLSR is an application level protocol simular to many IP routing protocol,  
+but MA-NLSR uses NDN's Interest/Data packets to dissemminate rotuing updates inside a single Area.  
 NLSR is the first intra-domin routing protocol in most NDN researches, but doesn't support multi-Area concept.  
 We extend NLSR to have Multi-Area which keeps the NLSR's design patterns.
 
-DCN-NLSR is designed to accomplish three key tasks:
+MA-NLSR is designed to accomplish three key tasks:
 - discover adjacent neighbors in specific area
 - disseminate and synchronize topology, name prefix in specific area
 - calculate a routing table and populate NFD's FIB in specific area
 
 # MA-NLSR Architecture  
-DCN-NLSR modifies the following modules to support "multiple areas" like OSPF.  
+MA-NLSR modifies the following modules to support "multiple areas" like OSPF.  
 The LSA format is show below.  
 Each LSA has the name \/\<network\>\/NLSR\/\<Area-ID\>\/LSA\/\<site\>\/\<router\>\/\<lsa-type\>\/\<version\>,  
 where \<lsa-type\> can be NAME, ADJACENCY, IA-NAME, Ext-NAME, Ext-Net-NAME.  
