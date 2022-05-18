@@ -71,9 +71,9 @@ $ nlsr
 - Based on NLSR 0.7.1 & ndn-cxx 0.7.1
  - Added Features :
       * Anycast Name Prefix
-      * External NetName LSA for Static Redistribution
-      * Inter-Area Name LSA
-      * BGP Redistribution
+      * External Name LSA for Static by operator
+      * Inter-Area Name LSA among Areas
+      * External NetName LSA for BGP Redistribution
 
  - Not Supported Yet :
       * Stub Area
